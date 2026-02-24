@@ -23,7 +23,6 @@ text-align:center;
 100%{background-position:0% 50%;}
 }
 
-/* Başlık */
 .header{
 padding:60px 20px;
 font-size:55px;
@@ -31,36 +30,34 @@ font-weight:bold;
 letter-spacing:4px;
 }
 
-/* Kart Genel */
 .cards{
 display:flex;
 flex-wrap:wrap;
 justify-content:center;
-gap:20px;
+gap:25px;
 padding:20px;
 }
 
 .card{
+background:rgba(255,255,255,0.1);
+backdrop-filter:blur(12px);
 padding:25px;
 border-radius:20px;
-width:280px;
+width:320px;
 box-shadow:0 10px 30px rgba(0,0,0,0.5);
 transition:0.3s;
+text-align:left;
 }
-
-/* Renkli Kartlar */
-.red{background:#b71c1c;}
-.blue{background:#0d47a1;}
-.green{background:#1b5e20;}
-.purple{background:#4a148c;}
-.orange{background:#e65100;}
 
 .card:hover{
 transform:translateY(-10px);
-opacity:0.9;
+background:rgba(255,255,255,0.2);
 }
 
-/* Buton */
+h2{
+text-align:center;
+}
+
 button{
 background:#ff9800;
 color:white;
@@ -78,11 +75,9 @@ transform:scale(1.1);
 background:#e65100;
 }
 
-/* Instagram */
 .footer{
 margin-top:60px;
 padding:40px;
-font-size:20px;
 }
 
 .footer img{
@@ -99,78 +94,65 @@ margin-right:10px;
 🚁 TULPAR
 </div>
 
-<!-- BİZ KİMİZ -->
-<h2>Biz Kimiz?</h2>
+<h2>Takım Üyeleri</h2>
 
 <div class="cards">
 
-<div class="card red">
-<h3>Melih Işık AYHAN</h3>
-Elektrik Elektronik<br>
-İHA sistemi alanında görev almaktadır.
-</div>
-
-<div class="card blue">
-<h3>Alperen UÇAR</h3>
-Elektrik Elektronik<br>
-İHA sisteminde görev almaktadır.
-</div>
-
-<div class="card green">
-<h3>Feyza ŞAHİN</h3>
-Elektrik Elektronik<br>
-İHA sisteminde görev almaktadır.
-</div>
-
-<div class="card purple">
+<div class="card">
 <h3>Ecrin Zeynep ÇIKAR</h3>
-Yazılım - Koordinasyon<br>
-Takım organizasyonundan sorumludur.
+Adı belirtilen öğrenci Nilüfer Anadolu İmam Hatip Lisesinde hazırlık sınıfında okumaktadır. 
+Okulumuzda bulunan profesyonel öğretmenler tarafından verilen drone kursunda bulunmaktadır. 
+Yarışmaya katılan takımının başkanlık rolünü göstermektedir aynı zamanda ortaokulda 
+Deneyap sınavlarına katılıp başarı göstererek mezun olmuştur. Takımda başkanlık rolü ile birlikte 
+yazılım departmanında görev almaktadır.
 </div>
 
-<div class="card orange">
-<h3>Ömer Faruk KANLICI</h3>
-Yazılım bölümünde görev almaktadır.
-</div>
-
-<div class="card red">
-<h3>Muhammed Emin GÖKÇE</h3>
-Yazılım bölümünde görev almaktadır.
-</div>
-
-<div class="card blue">
-<h3>Azra YILDIZ</h3>
-Mekanik tasarım bölümünde görev almaktadır.
-</div>
-
-<div class="card green">
-<h3>Emir Yiğit TOPAR</h3>
-Mekanik tasarım bölümünde görev almaktadır.
-</div>
-
-<div class="card purple">
+<div class="card">
 <h3>Mohammad SALAH</h3>
-Yazılım bölümünde görev almaktadır.
+Nilüfer Anadolu İmam Hatip Lisesinde 9. sınıfta okumaktadır. 
+Drone kursunda bulunmaktadır. Yarışmada başkan yardımcısıdır ve yazılım departmanında görev almaktadır.
 </div>
 
+<div class="card">
+<h3>Melih Işık AYHAN</h3>
+Hazırlık sınıfında okumaktadır. Drone kursunda eğitim almaktadır. 
+Projenin elektrik ve elektronik departmanında çalışmaktadır. 
+TÜBİTAK yarışmalarında derecesi bulunmaktadır.
 </div>
 
-<!-- PROJE AMACI -->
-<h2>Projemizin Amacı</h2>
+<div class="card">
+<h3>Alperen UÇAR</h3>
+Hazırlık sınıfında okumaktadır. Elektrik-elektronik departmanında görev almakta ve 
+bu departmanın sorumluluğunu üstlenmektedir. TÜBİTAK ve Teknofest deneyimi bulunmaktadır.
+</div>
 
-<div style="max-width:900px;margin:auto;text-align:left;padding:30px;
-background:rgba(255,255,255,0.1);border-radius:20px;">
+<div class="card">
+<h3>Feyza ŞAHİN</h3>
+9. sınıfta okumaktadır. Elektrik-elektronik bölümünde görev almaktadır. 
+Ortaokulda robotik alanında eğitim almıştır.
+</div>
 
-1- Afet bölgelerinde hızlı aydınlatma sağlamak.<br>
-2- Jeneratör ihtiyacını ortadan kaldırmak.<br>
-3- Gece arama kurtarma çalışmalarını hızlandırmak.<br>
-4- Görüş mesafesini artırmak.<br>
-5- Kritik alanlarda güvenli müdahale sağlamak.<br>
-6- Enerji kesintilerinde çözüm üretmek.<br>
-7- Taşınabilir kablolu sistem geliştirmek.<br>
-8- Uzaktan kontrol edilebilir sistem yapmak.<br>
-9- Enerji verimliliğini artırmak.<br>
-10- Toplumsal güvenliğe katkı sağlamak.
+<div class="card">
+<h3>Ömer Faruk KANLICI</h3>
+Hazırlık sınıfında okumaktadır. Yazılım alanında görev almaktadır. 
+TÜBİTAK ve Teknofest deneyimi bulunmaktadır.
+</div>
+
+<div class="card">
+<h3>Muhammed Emin GÖKÇE</h3>
+Hazırlık sınıfında okumaktadır. Yazılım departmanında sorumluluk almaktadır.
+</div>
+
+<div class="card">
+<h3>Azra Eylül YILDIZ</h3>
+Hazırlık sınıfında okumaktadır. Mekanik tasarım alanında görev almaktadır. 
+TÜBİTAK deneyimi vardır ve daha önce Teknofest için elektronik eğitimi almıştır.
+</div>
+
+<div class="card">
+<h3>Emir Yiğit TOPAR</h3>
+9. sınıfta okumaktadır. Mekanik-Tasarım departmanında görev almaktadır.
+</div>
 
 </div>
 
