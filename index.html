@@ -15,6 +15,7 @@ background:linear-gradient(-45deg,#0f172a,#1e3a8a,#0f172a);
 background-size:400% 400%;
 animation:gradient 12s ease infinite;
 text-align:center;
+overflow-x:hidden;
 }
 
 @keyframes gradient{
@@ -23,19 +24,23 @@ text-align:center;
 100%{background-position:0% 50%;}
 }
 
-h2{
-margin-bottom:20px;
+/* Başlık */
+.header{
+padding:60px 20px;
+font-size:55px;
+font-weight:bold;
+letter-spacing:4px;
 }
 
-/* Kart Tasarımı */
+/* Kart */
 .card{
 background:rgba(255,255,255,0.08);
 backdrop-filter:blur(12px);
 padding:30px;
 border-radius:25px;
 max-width:900px;
-margin:20px auto;
-box-shadow:0 10px 30px rgba(0,0,0,0.4);
+margin:30px auto;
+box-shadow:0 10px 40px rgba(0,0,0,0.5);
 transition:0.3s;
 }
 
@@ -62,11 +67,44 @@ transform:scale(1.1);
 background:#e65100;
 }
 
-.header{
-padding:70px 20px;
-font-size:50px;
-font-weight:bold;
-letter-spacing:3px;
+/* Drone Animasyonu */
+.drone{
+position:relative;
+width:120px;
+animation:fly 6s ease-in-out infinite;
+}
+
+@keyframes fly{
+0%{transform:translateX(-200px) translateY(0);}
+50%{transform:translateX(200px) translateY(-20px);}
+100%{transform:translateX(-200px) translateY(0);}
+}
+
+/* Slider */
+.slider{
+width:90%;
+max-width:900px;
+margin:40px auto;
+overflow:hidden;
+border-radius:20px;
+}
+
+.slides{
+display:flex;
+width:300%;
+animation:slide 12s infinite;
+}
+
+.slides img{
+width:100%;
+border-radius:20px;
+}
+
+@keyframes slide{
+0%{transform:translateX(0);}
+33%{transform:translateX(-100%);}
+66%{transform:translateX(-200%);}
+100%{transform:translateX(0);}
 }
 
 </style>
@@ -75,6 +113,20 @@ letter-spacing:3px;
 
 <div class="header">
 🚁 TULPAR
+</div>
+
+<!-- DRONE ANİMASYON -->
+<div>
+<img class="drone" src="https://cdn-icons-png.flaticon.com/512/2103/2103633.png">
+</div>
+
+<!-- SLIDER -->
+<div class="slider">
+<div class="slides">
+<img src="https://images.unsplash.com/photo-1508610048659-a06b669e3321">
+<img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee">
+<img src="https://images.unsplash.com/photo-1518770660439-4636190af475">
+</div>
 </div>
 
 <!-- BİZ KİMİZ -->
@@ -91,8 +143,7 @@ Azra YILDIZ<br>
 Emir Yiğit TOPAR<br>
 Mohammad SALAH<br><br>
 
-Elektronik, Yazılım ve Mekanik alanlarında görev yapan
-İHA geliştirme ekibiyiz.
+İHA sistemleri üzerine çalışan multidisipliner bir ekibiz.
 
 </div>
 
@@ -102,15 +153,15 @@ Elektronik, Yazılım ve Mekanik alanlarında görev yapan
 
 <div style="text-align:left;">
 
-1- Afet bölgelerinde hızlı ve etkili aydınlatma sağlamak.<br>
-2- Jeneratör ihtiyacı olmadan havadan ışık yaymak.<br>
+1- Afet bölgelerinde hızlı aydınlatma sağlamak.<br>
+2- Jeneratör ihtiyacını ortadan kaldırmak.<br>
 3- Gece arama kurtarma çalışmalarını hızlandırmak.<br>
-4- Kritik alanlarda görüş mesafesini artırmak.<br>
-5- Suç ve olay yerlerinde güvenli aydınlatma sağlamak.<br>
-6- Enerji kesintilerinde hızlı çözüm üretmek.<br>
-7- Taşınabilir ve kablolu sistem ile güvenli çalışma.<br>
-8- Uzaktan kontrol edilebilen akıllı platform geliştirmek.<br>
-9- Enerji verimliliği yüksek sistem tasarlamak.<br>
+4- Görüş mesafesini artırmak.<br>
+5- Kritik alanlarda güvenli müdahale sağlamak.<br>
+6- Enerji kesintilerinde çözüm üretmek.<br>
+7- Taşınabilir kablolu sistem geliştirmek.<br>
+8- Uzaktan kontrol edilebilir sistem yapmak.<br>
+9- Enerji verimliliğini artırmak.<br>
 10- Toplumsal güvenliğe katkı sağlamak.
 
 </div>
@@ -129,4 +180,3 @@ Elektronik, Yazılım ve Mekanik alanlarında görev yapan
 
 </body>
 </html>
-
