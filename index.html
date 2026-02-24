@@ -13,7 +13,7 @@ font-family:Arial, sans-serif;
 color:white;
 background:linear-gradient(-45deg,#0f172a,#1e3a8a,#0f172a);
 background-size:400% 400%;
-animation:gradient 10s ease infinite;
+animation:gradient 12s ease infinite;
 text-align:center;
 }
 
@@ -23,42 +23,50 @@ text-align:center;
 100%{background-position:0% 50%;}
 }
 
-.header{
-padding:70px 20px;
-font-size:50px;
-font-weight:bold;
-letter-spacing:3px;
+h2{
+margin-bottom:20px;
 }
 
-.section{
-padding:50px 20px;
-}
-
+/* Kart Tasarımı */
 .card{
-background:rgba(255,255,255,0.1);
+background:rgba(255,255,255,0.08);
+backdrop-filter:blur(12px);
 padding:30px;
-border-radius:20px;
+border-radius:25px;
 max-width:900px;
-margin:auto;
-backdrop-filter:blur(10px);
-line-height:1.6;
+margin:20px auto;
+box-shadow:0 10px 30px rgba(0,0,0,0.4);
+transition:0.3s;
 }
 
+.card:hover{
+transform:translateY(-10px);
+background:rgba(255,255,255,0.15);
+}
+
+/* Buton */
 button{
 background:#ff9800;
 color:white;
-padding:20px 40px;
+padding:15px 35px;
 border:none;
 border-radius:15px;
-font-size:20px;
-cursor:pointer;
+font-size:18px;
 font-weight:bold;
+cursor:pointer;
 transition:0.3s;
 }
 
 button:hover{
 transform:scale(1.1);
 background:#e65100;
+}
+
+.header{
+padding:70px 20px;
+font-size:50px;
+font-weight:bold;
+letter-spacing:3px;
 }
 
 </style>
@@ -70,10 +78,9 @@ background:#e65100;
 </div>
 
 <!-- BİZ KİMİZ -->
-<div class="section">
+<div class="card">
 <h2>Biz Kimiz?</h2>
 
-<div class="card">
 Melih Işık AYHAN<br>
 Alperen UÇAR<br>
 Feyza ŞAHİN<br>
@@ -84,43 +91,41 @@ Azra YILDIZ<br>
 Emir Yiğit TOPAR<br>
 Mohammad SALAH<br><br>
 
-Ekibimiz İHA sistemi üzerinde çalışmaktadır.
-Elektronik, yazılım ve mekanik alanlarında görev almaktayız.
-</div>
+Elektronik, Yazılım ve Mekanik alanlarında görev yapan
+İHA geliştirme ekibiyiz.
 
 </div>
 
-<!-- PROJENİN AMACI -->
-<div class="section">
+<!-- PROJE AMACI -->
+<div class="card">
 <h2>Projemizin Amacı</h2>
 
-<div class="card" style="text-align:left;">
+<div style="text-align:left;">
 
 1- Afet bölgelerinde hızlı ve etkili aydınlatma sağlamak.<br>
 2- Jeneratör ihtiyacı olmadan havadan ışık yaymak.<br>
 3- Gece arama kurtarma çalışmalarını hızlandırmak.<br>
-4- Kritik alanlarda ekiplerin görüş mesafesini artırmak.<br>
-5- Suç mahallinde güvenli ve net aydınlatma sağlamak.<br>
-6- Enerji kesintilerinde hızlı çözüm sunmak.<br>
-7- Taşınabilir ve kablolu sistem ile güvenli çalışma sağlamak.<br>
-8- Uzaktan kontrol edilebilen akıllı bir platform geliştirmek.<br>
+4- Kritik alanlarda görüş mesafesini artırmak.<br>
+5- Suç ve olay yerlerinde güvenli aydınlatma sağlamak.<br>
+6- Enerji kesintilerinde hızlı çözüm üretmek.<br>
+7- Taşınabilir ve kablolu sistem ile güvenli çalışma.<br>
+8- Uzaktan kontrol edilebilen akıllı platform geliştirmek.<br>
 9- Enerji verimliliği yüksek sistem tasarlamak.<br>
-10- Toplumsal güvenliğe ve acil müdahaleye katkı sağlamak.
+10- Toplumsal güvenliğe katkı sağlamak.
 
 </div>
+
 </div>
 
-<!-- SPONSORLUK -->
-<div class="section">
+<!-- SPONSOR -->
+<div class="card">
 <h2>Sponsorluk Dosyası</h2>
 
-<a href="tulpar-sponsorluk-dosyasi.pdf" target="_blank">
-<button>📄 Sponsorluk Dosyasını Aç</button>
-</a>
+<button onclick="window.open('tulpar-sponsorluk-dosyasi.pdf','_blank')">
+📄 Dosyayı Aç
+</button>
 
 </div>
 
 </body>
 </html>
-
-
