@@ -15,7 +15,6 @@ background:linear-gradient(-45deg,#0f172a,#1e3a8a,#0f172a);
 background-size:400% 400%;
 animation:gradient 12s ease infinite;
 text-align:center;
-overflow-x:hidden;
 }
 
 @keyframes gradient{
@@ -32,21 +31,33 @@ font-weight:bold;
 letter-spacing:4px;
 }
 
-/* Kart */
+/* Kart Genel */
+.cards{
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+gap:20px;
+padding:20px;
+}
+
 .card{
-background:rgba(255,255,255,0.08);
-backdrop-filter:blur(12px);
-padding:30px;
-border-radius:25px;
-max-width:900px;
-margin:30px auto;
-box-shadow:0 10px 40px rgba(0,0,0,0.5);
+padding:25px;
+border-radius:20px;
+width:280px;
+box-shadow:0 10px 30px rgba(0,0,0,0.5);
 transition:0.3s;
 }
 
+/* Renkli Kartlar */
+.red{background:#b71c1c;}
+.blue{background:#0d47a1;}
+.green{background:#1b5e20;}
+.purple{background:#4a148c;}
+.orange{background:#e65100;}
+
 .card:hover{
 transform:translateY(-10px);
-background:rgba(255,255,255,0.15);
+opacity:0.9;
 }
 
 /* Buton */
@@ -67,44 +78,17 @@ transform:scale(1.1);
 background:#e65100;
 }
 
-/* Drone Animasyonu */
-.drone{
-position:relative;
-width:120px;
-animation:fly 6s ease-in-out infinite;
+/* Instagram */
+.footer{
+margin-top:60px;
+padding:40px;
+font-size:20px;
 }
 
-@keyframes fly{
-0%{transform:translateX(-200px) translateY(0);}
-50%{transform:translateX(200px) translateY(-20px);}
-100%{transform:translateX(-200px) translateY(0);}
-}
-
-/* Slider */
-.slider{
-width:90%;
-max-width:900px;
-margin:40px auto;
-overflow:hidden;
-border-radius:20px;
-}
-
-.slides{
-display:flex;
-width:300%;
-animation:slide 12s infinite;
-}
-
-.slides img{
-width:100%;
-border-radius:20px;
-}
-
-@keyframes slide{
-0%{transform:translateX(0);}
-33%{transform:translateX(-100%);}
-66%{transform:translateX(-200%);}
-100%{transform:translateX(0);}
+.footer img{
+width:40px;
+vertical-align:middle;
+margin-right:10px;
 }
 
 </style>
@@ -115,43 +99,67 @@ border-radius:20px;
 🚁 TULPAR
 </div>
 
-<!-- DRONE ANİMASYON -->
-<div>
-<img class="drone" src="https://cdn-icons-png.flaticon.com/512/2103/2103633.png">
-</div>
-
-<!-- SLIDER -->
-<div class="slider">
-<div class="slides">
-<img src="https://images.unsplash.com/photo-1508610048659-a06b669e3321">
-<img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee">
-<img src="https://images.unsplash.com/photo-1518770660439-4636190af475">
-</div>
-</div>
-
 <!-- BİZ KİMİZ -->
-<div class="card">
 <h2>Biz Kimiz?</h2>
 
-Melih Işık AYHAN<br>
-Alperen UÇAR<br>
-Feyza ŞAHİN<br>
-Ecrin Zeynep ÇIKAR<br>
-Ömer Faruk KANLICI<br>
-Muhammed Emin GÖKÇE<br>
-Azra YILDIZ<br>
-Emir Yiğit TOPAR<br>
-Mohammad SALAH<br><br>
+<div class="cards">
 
-İHA sistemleri üzerine çalışan multidisipliner bir ekibiz.
+<div class="card red">
+<h3>Melih Işık AYHAN</h3>
+Elektrik Elektronik<br>
+İHA sistemi alanında görev almaktadır.
+</div>
+
+<div class="card blue">
+<h3>Alperen UÇAR</h3>
+Elektrik Elektronik<br>
+İHA sisteminde görev almaktadır.
+</div>
+
+<div class="card green">
+<h3>Feyza ŞAHİN</h3>
+Elektrik Elektronik<br>
+İHA sisteminde görev almaktadır.
+</div>
+
+<div class="card purple">
+<h3>Ecrin Zeynep ÇIKAR</h3>
+Yazılım - Koordinasyon<br>
+Takım organizasyonundan sorumludur.
+</div>
+
+<div class="card orange">
+<h3>Ömer Faruk KANLICI</h3>
+Yazılım bölümünde görev almaktadır.
+</div>
+
+<div class="card red">
+<h3>Muhammed Emin GÖKÇE</h3>
+Yazılım bölümünde görev almaktadır.
+</div>
+
+<div class="card blue">
+<h3>Azra YILDIZ</h3>
+Mekanik tasarım bölümünde görev almaktadır.
+</div>
+
+<div class="card green">
+<h3>Emir Yiğit TOPAR</h3>
+Mekanik tasarım bölümünde görev almaktadır.
+</div>
+
+<div class="card purple">
+<h3>Mohammad SALAH</h3>
+Yazılım bölümünde görev almaktadır.
+</div>
 
 </div>
 
 <!-- PROJE AMACI -->
-<div class="card">
 <h2>Projemizin Amacı</h2>
 
-<div style="text-align:left;">
+<div style="max-width:900px;margin:auto;text-align:left;padding:30px;
+background:rgba(255,255,255,0.1);border-radius:20px;">
 
 1- Afet bölgelerinde hızlı aydınlatma sağlamak.<br>
 2- Jeneratör ihtiyacını ortadan kaldırmak.<br>
@@ -166,16 +174,23 @@ Mohammad SALAH<br><br>
 
 </div>
 
-</div>
-
 <!-- SPONSOR -->
-<div class="card">
+<div style="margin-top:60px;">
 <h2>Sponsorluk Dosyası</h2>
 
 <button onclick="window.open('tulpar-sponsorluk-dosyasi.pdf','_blank')">
 📄 Dosyayı Aç
 </button>
 
+</div>
+
+<!-- INSTAGRAM -->
+<div class="footer">
+<img src="https://cdn-icons-png.flaticon.com/512/1384/1384063.png">
+<a href="https://www.instagram.com/tulpar_drone_team" 
+target="_blank" style="color:white;text-decoration:none;font-weight:bold;">
+tulpar_drone_team
+</a>
 </div>
 
 </body>
